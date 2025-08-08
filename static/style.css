@@ -25,3 +25,15 @@ img.lazy {
 img.lazy.loaded {
     filter: blur(0);
 }
+
+.img-thumbnail-30 {
+    max-width: 30%;
+}
+
+.img-thumbnail-50 {
+    max-width: 50%;
+}
+
+.img-thumbnail-70 {
+    max-width: 70%;
+}
