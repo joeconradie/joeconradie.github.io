@@ -11,17 +11,33 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
   <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">Karli Conradie Physiotherapists - ICD 10 Codes</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
+  <div class="container">
+    <a class="navbar-brand" href="#">Karli Conradie Physiotherapists - ICD 10 Codes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
 
-  <!-- Content -->
-  <p>Hello World!</p>
+  <!-- Hero Section -->
+  <section id="hero" class="section bg-light text-center">
+    <div class="container">
+      <img data-src="static/logo.jpg" alt="Physio hero" class="img-thumbnail-30 mt-2 lazy fade-in">
+    </div>
+  </section>
+
+  <!-- Search Input -->
+  <input class="form-control search-box" id="searchInput" type="text" placeholder="Search description...">
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="dataTable"></tbody>
+  </table>
 
   <!-- Footer -->
   <footer class="bg-light text-center py-4">
@@ -32,6 +48,74 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="static/helper.js"></script>
+  <script>
+    // Your data (Python-style list of dicts → JS array of objects)
+    const data = [
+      {"Code": "M25.51", "Description": "Pain in joint, shoulder region"},
+      {"Code": "M25.53", "Description": "Pain in joint, forearm"},
+      {"Code": "M25.54", "Description": "Pain in joint, hand"},
+      {"Code": "M25.55", "Description": "Pain in joint, pelvic region and thigh"},
+      {"Code": "M25.56", "Description": "Pain in joint, lower leg"},
+      {"Code": "M25.57", "Description": "Pain in joint, ankle and foot"},
+      {"Code": "M41.10", "Description": "Juvenile idiopathic scoliosis, multiple sites in spine"},
+      {"Code": "M50.1", "Description": "Cervical disc disorder with radiculopathy"},
+      {"Code": "M50.9", "Description": "Cervical disc disorder, unspecified"},
+      {"Code": "M54.12", "Description": "Radiculopathy, cervical region"},
+      {"Code": "M54.16", "Description": "Radiculopathy, lumbar region"},
+      {"Code": "M54.17", "Description": "Radiculopathy, lumbosacral region"},
+      {"Code": "M54.20", "Description": "Cervicalgia, multiple sites in spine"},
+      {"Code": "M54.21", "Description": "Cervicalgia, occipito-atlanto-axial region"},
+      {"Code": "M54.22", "Description": "Cervicalgia, cervical region"},
+      {"Code": "M54.23", "Description": "Cervicalgia, cervicothoracic region"},
+      {"Code": "M54.46", "Description": "Lumbago with sciatica, lumbar region"},
+      {"Code": "M54.50", "Description": "Low back pain, multiple sites in spine"},
+      {"Code": "M54.55", "Description": "Low back pain, thoracolumbar region"},
+      {"Code": "M54.56", "Description": "Low back pain, lumbar region"},
+      {"Code": "M54.57", "Description": "Low back pain, lumbosacral region"},
+      {"Code": "M54.60", "Description": "Pain in thoracic spine, multiple sites in spine"},
+      {"Code": "M54.64", "Description": "Pain in thoracic spine, thoracic region"},
+      {"Code": "M62.63", "Description": "Muscle strain, forearm"},
+      {"Code": "M62.65", "Description": "Muscle strain, pelvic region and thigh"},
+      {"Code": "M67.8", "Description": "Other specified disorders of synovium and tendon"},
+      {"Code": "M70.75", "Description": "Other bursitis of hip, pelvic region and thigh"},
+      {"Code": "M70.83", "Description": "Other soft tissue disorders related to use, overuse and pressure, forearm"},
+      {"Code": "M75.1", "Description": "Rotator cuff syndrome"},
+      {"Code": "M76.67", "Description": "Achilles tendinitis, ankle and foot"},
+      {"Code": "M79.22", "Description": "Neuralgia and neuritis, unspecified, upper arm"},
+      {"Code": "M79.63", "Description": "Pain in limb, forearm"},
+      {"Code": "M79.66", "Description": "Pain in limb, lower leg"},
+      {"Code": "M79.97", "Description": "Soft tissue disorder, unspecified, ankle and foot"},
+      {"Code": "S63.5,X50.30", "Description": "Sprain and strain of wrist"},
+      {"Code": "S73.1, W01.90", "Description": "Sprain and strain of hip"},
+      {"Code": "S73.1,W01.90", "Description": "Sprain and strain of hip"},
+      {"Code": "S76.7, X50.00", "Description": "Injury of multiple muscles and tendons at hip and thigh level"},
+      {"Code": "S80.0, W01.30", "Description": "Contusion of knee"},
+      {"Code": "S83.5, X50.80", "Description": "Sprain and strain involving (anterior)(posterior) cruciate ligament of knee"},
+      {"Code": "S83.5,X50.80", "Description": "Sprain and strain involving (anterior)(posterior) cruciate ligament of knee"}
+    ];
+
+    // Render table rows
+    const tableBody = document.getElementById("dataTable");
+    function renderTable(items) {
+      tableBody.innerHTML = "";
+      items.forEach(item => {
+        const row = `<tr>
+            <td>${item.Code}</td>
+            <td>${item.Description}</td>
+          </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+    renderTable(data); // initial render
+
+    // Search filter (on description only)
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+      const filter = this.value.toLowerCase();
+      const filteredData = data.filter(item =>
+        item.Description.toLowerCase().includes(filter)
+      );
+      renderTable(filteredData);
+    });
+  </script>
 </body>
 </html>
