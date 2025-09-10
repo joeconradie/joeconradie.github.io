@@ -6,6 +6,7 @@
   <title>Karli Conradie Physio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="static/style.css" rel="stylesheet">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
@@ -19,21 +20,182 @@
       </button>
       <div class="collapse navbar-collapse" id="navLinks">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#approach">Our Approach</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Meet the Team</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="section bg-light text-center">
+  <section id="hero" class="section bg-white text-center">
+    <!-- <div class="container-fluid position-relative p-0" style="height: 100vh;">
+      Background Video
+      <video class="hwa" poster="https://i.pinimg.com/736x/2f/94/02/2f94029a1062e8c32fb00c023e069388.jpg" preload="auto" src="blob:https://za.pinterest.com/e5108e23-1fa1-458b-979e-5c5007b1d59a" style="object-fit: contain;"><track kind="captions"></video>
+      <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index: -1;">
+        <source src="blob:https://za.pinterest.com/e5108e23-1fa1-458b-979e-5c5007b1d59a" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      Overlay Content
+      <div class="d-flex flex-column justify-content-center align-items-center text-white h-100">
+        <h1 class="display-3 fw-bold">Welcome</h1>
+        <p class="lead">This is a Bootstrap 5 background video section</p>
+        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+      </div>
+    </div> -->
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="background-image: url('static/running.jpeg'); background-size: cover; background-position: center; height: 400px; opacity: 0.9"
+    >
+      <div>
+        <h1 class="fade-in" style="color: #7ed3e7; background-color: lightgray; opacity: 0.8;">Empowering Movement. Enhancing Performance.</h1>
+        <p class="lead fade-in" style="color: black"><strong>Your journey to recovery starts here.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About us Section -->
+  <section id="about" class="section bg-light text-center">
     <div class="container">
-      <h1 class="fade-in">Empowering Movement. Restoring Health.</h1>
-      <p class="lead fade-in">Your journey to recovery starts here.</p>
-      <img data-src="static/logo.jpg" alt="Physio hero" class="img-thumbnail-30 mt-2 lazy fade-in">
+      <h1 class="fade-in">About us</h1>
+      <img data-src="static/logo.jpg" alt="KCP Logo" class="img-thumbnail-30 my-2 lazy fade-in">
+      <p class="lead fade-in justify-content-between" style="text-align: justify;">
+        We are a Physiotherapy practice with a special interest in sports injuries. We are committed 
+        to providing exceptional care to our patients and we are passionate about helping people 
+        reach their full potential with regards to sport and lifestyle goals. We are committed to 
+        provide high quality physiotherapy care for the sporting population. We believe that a holistic 
+        approach is vital in addressing the underlying cause of symptoms and in unlocking ones full 
+        potential, whether that is entering your first 5km race or competing as a professional athlete. 
+        based at Gibbs and Associates, in Garsfontein, Pretoria East.
+      </p>
+      <div class="d-flex justify-content-between">
+        <div class="img-container-rectangle">
+          <img data-src="static/about1.jpeg" class="img-fluid mt-2 lazy fade-in" alt="About1">
+        </div>
+        <div class="img-container-rectangle">
+          <img data-src="static/about2.jpeg" class="img-fluid mt-2 lazy fade-in" alt="About2">
+        </div>
+        <div class="img-container-rectangle">
+          <img data-src="static/about3.jpeg" class="img-fluid mt-2 lazy fade-in" alt="About3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section id="approach" class="section bg-white text-center">
+    <div class="container">
+      <h2 class="fade-in">Our Approach</h2>
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          If there is the slightest chance that a patient can be educated in any method that enables
+          them to reduce their own pain and disability using their own understanding and resources,
+          they should receive that education. Every patient is entitled to the information and every
+          therapist should be obliged to provide it.
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Robin McKenzie
+        </figcaption>
+      </figure>
+      <div class="d-flex justify-content-center">
+        <div class="img-container-square">
+          <img data-src="static/extention.jpg" class="img-fluid mb-2 lazy fade-in" alt="About1">
+        </div>
+      </div>
+      <p class="lead" style="text-align: justify;">
+        We believe that accurately identifying the cause of a patient's symptoms, is crucial to treat
+        them effectively and assist them in getting back to training or competing as soon as feasible.
+        We enjoy using Mechanical Diagnosis and Therapy (MDT) as a means of effectively treating
+        patients. believes that educating patients through the MDT method empowers them to self-
+        manage their pain or other symptoms. Addressing fascia restrictions as well as
+        rehabilitation- and strength needs, tailored individually for each patient, also forms part of
+        the…
+      </p>
+      <div class="d-flex justify-content-center">
+        <div class="img-container-square">
+          <img data-src="static/approach1.jpg" class="img-fluid mt-2 mx-5 lazy fade-in" alt="approach1">
+        </div>
+        <div class="img-container-square">
+          <img data-src="static/approach2.jpg" class="img-fluid mt-2 mx-5 lazy fade-in" alt="approach2">
+        </div>
+        <div class="img-container-square">
+          <img data-src="static/approach3.jpg" class="img-fluid mt-2 mx-5 lazy fade-in" alt="approach3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team Section -->
+  <section id="team" class="section bg-light text-center">
+    <div class="container">
+      <h2 class="fade-in">Meet the Team</h2>
+      <div class="d-flex justify-content-center">
+        <div class="img-container-rectangle">
+          <img data-src="static/team.jpg" class="img-fluid mb-2 lazy fade-in" alt="Team">
+        </div>
+      </div>
+      <!-- <div class="row mt-4 d-flex"> -->
+      <div class="row mt-4">
+        <!-- <div class="align-items-center"> -->
+          <div class="col-md-6 fade-in">
+            <h4>Karli Conradie (Owner and Physiotherapist)</h4>
+            <div class="d-flex justify-content-center">
+              <div class="img-container-square">
+                <img data-src="static/karli.jpg" class="img-fluid mb-2 lazy fade-in" alt="Karli">
+              </div>
+            </div>
+            <div style="text-align: justify;">
+              <p>
+                Karli is exceptionally passionate about the field of Sports Physiotherapy. She believes that
+                accurately identifying the cause of a patient's symptoms, is crucial to treat them effectively
+                and assist them in getting back to training or competing as soon as feasible. She enjoys
+                using Mechanical Diagnosis and Therapy (MDT) as a means of effectively treating patients.
+                She is a credentialled clinician in MDT, through the world-acclaimed McKenzie Institute
+                International and believes that educating patients through the MDT method empowers them
+                to self-manage their pain or other symptoms. She also enjoys addressing fascia restrictions
+                as well as rehabilitation- and strength needs, tailored individually for each patient.
+              </p>
+              <p>
+                Karli has had the opportunity of working with elite athletes in practice as well as at various
+                national and international track and field events. These events included the IAAF World U20
+                Championships in Finland, international races across Europe, African Regional U20 Games
+                in Botswana, as well as various SA Senior- & Junior Championships, AGN Championships
+                and USSA Championships, since 2018.
+              </p>
+              <p>
+                In 2023 she opened her own practice, at Gibbs and Associates, working alongside an
+                inspiring mentor of hers, Karen Gibbs, who invested a lot of time and effort into her
+                professional growth and development over five years. Karli is grateful for this new
+                opportunity and excited to be part of a setup that provides high quality physiotherapy care for
+                the sporting population. She enjoys being part of a great team, where each individual has a
+                unique skillset and is committed to treat each patient with care and respect.
+              </p>
+              <p>
+                Karli is happily married to her husband Joe. She values time spent with her family and
+                enjoys training for, and competing in, road running, trail running and triathlon events.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in">
+            <h4>Santia Loubser (Physiotherapist)</h4>
+            <div class="d-flex justify-content-center">
+              <div class="img-container-square">
+                <img data-src="static/santia.jpg" class="img-fluid mb-2 lazy fade-in" alt="Santia">
+              </div>
+            </div>
+            <div style="text-align: justify;">
+              <p>
+                Still to be added.
+              </p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
     </div>
   </section>
 
@@ -43,34 +205,25 @@
       <h2 class="fade-in">Our Services</h2>
       <div class="row mt-4">
         <div class="col-md-4 fade-in">
-          <img data-src="static/sports_therapy.jpeg" alt="Sports Therapy" class="img-thumbnail-70 mt-2 lazy fade-in">
-          <h4>Sports Therapy</h4>
-          <p>Improve performance and recover from injuries.</p>
-        </div>
-        <div class="col-md-4 fade-in">
-          <img data-src="static/rehabilitation.jpeg" alt="Rehabilitation" class="img-thumbnail-70 mt-2 lazy fade-in">
-          <h4>Rehabilitation</h4>
-          <p>Personalized recovery programs for post-surgery care.</p>
-        </div>
-        <div class="col-md-4 fade-in">
-          <img data-src="static/pain_management.jpeg" alt="Pain Management" class="img-thumbnail-70 mt-2 lazy fade-in">
+            <div class="img-container-square">
+              <img data-src="static/pain_management.jpeg" class="img-fluid mb-2 lazy fade-in" alt="PainManagement">
+            </div>
           <h4>Pain Management</h4>
           <p>Targeted techniques to relieve chronic pain.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 fade-in">
-          <img data-src="static/logo.jpg" alt="About" class="img-thumbnail-50 mt-2 lazy fade-in">
+        <div class="col-md-4 fade-in">
+            <div class="img-container-square">
+              <img data-src="static/sports_injuries.jpeg" class="img-fluid mb-2 lazy fade-in" alt="SportsInjuries">
+            </div>
+          <h4>Sports Injuries</h4>
+          <p>Improve performance and recover from injuries.</p>
         </div>
-        <div class="col-md-6 fade-in">
-          <h2>About PhysioCare</h2>
-          <p>With years of experience, our team offers a holistic approach to healing and recovery tailored to each individual's needs.</p>
+        <div class="col-md-4 fade-in">
+            <div class="img-container-square">
+              <img data-src="static/rehabilitation.jpeg" class="img-fluid mb-2 lazy fade-in" alt="Rehabilitation">
+            </div>
+          <h4>Rehabilitation</h4>
+          <p>Personalized recovery programs for post-surgery care.</p>
         </div>
       </div>
     </div>
@@ -80,10 +233,38 @@
   <section id="contact" class="section bg-white">
     <div class="container text-center">
       <h2 class="fade-in">Contact Us</h2>
-      <p class="fade-in">Book a session or get in touch with our therapists.</p>
+      <p class="fade-in">
+        083 269 0269 / 087 265 4771<br>
+        karliconradiephysio@gmail.com<br>
+        <!-- (pin) 722a Jacqueline Drive, Garsfontein, Pretoria -->
+      </p>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex gap-3 fs-3">
+          <!-- Address (Google Maps link) -->
+          <a href="https://maps.app.goo.gl/aDfkfe65TAry4Ygu8" target="_blank" class="text-dark">
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/+27832690269" target="_blank" class="text-success">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61571832939653" target="_blank" class="text-primary">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/karliconradie.physio" target="_blank" class="text-danger">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+        </div>
+      </div>
       <div class="fade-in">
         <!-- <i class="bi bi-instagram"></i> -->
-        <a href="mailto:info@physiocare.com" class="btn btn-primary mt-3">Email Us</a>
+        <a href="mailto:karliconradiephysio@gmail.com" class="btn btn-primary mt-3">Email Us</a>
       </div>
     </div>
   </section>
