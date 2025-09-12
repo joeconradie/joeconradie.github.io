@@ -42,8 +42,8 @@ body { padding: 2rem; }
 .search-box { max-width: 70vw; margin-bottom: 1rem; }
 
 .img-container-rectangle {
-  width: 250px;   /* set desired width */
-  height: 350px;  /* set desired height */
+  width: 120px;   /* set desired width */
+  height: 200px;  /* set desired height */
   overflow: hidden;
 }
 
