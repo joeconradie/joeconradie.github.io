@@ -42,8 +42,8 @@ body { padding: 2rem; }
 .search-box { max-width: 70vw; margin-bottom: 1rem; }
 
 .img-container-rectangle {
-  width: 200px;   /* set desired width */
-  height: 300px;  /* set desired height */
+  width: 160px;   /* set desired width */
+  height: 240px;  /* set desired height */
   overflow: hidden;
 }
 
@@ -54,12 +54,24 @@ body { padding: 2rem; }
 }
 
 .img-container-square {
-  width: 250px;   /* set desired width */
-  height: 250px;  /* set desired height */
+  width: 300px;   /* set desired width */
+  height: 200px;  /* set desired height */
+  overflow: hidden;
+}
+
+.img-container-square2 {
+  width: 180px;   /* set desired width */
+  height: 230px;  /* set desired height */
   overflow: hidden;
 }
 
 .img-container-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* maintains aspect ratio, crops if needed */
+}
+
+.img-container-square2 img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* maintains aspect ratio, crops if needed */
