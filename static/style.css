@@ -1,5 +1,5 @@
 .section {
-      padding: 50px 0;
+      padding: 30px 0;
     }
 
 .fade-in {
@@ -42,8 +42,8 @@ body { padding: 2rem; }
 .search-box { max-width: 70vw; margin-bottom: 1rem; }
 
 .img-container-rectangle {
-  width: 120px;   /* set desired width */
-  height: 200px;  /* set desired height */
+  width: 200px;   /* set desired width */
+  height: 300px;  /* set desired height */
   overflow: hidden;
 }
 
