@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karli Conradie Physio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="static/style.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+  <!-- Hero Section -->
+  <section id="hero" class="bg-light text-center my-3">
+    <div class="container pb-2">
+      <img src="static/logo.jpg" alt="Physio hero" class="img-thumbnail-30 mt-2 fade-in">
+      <h1 class="fade-in">Treatment Codes</h1>
+    </div>
+  </section>
+
+  <!-- Search Input -->
+  <input class="form-control search-box" id="searchInput" type="text" placeholder="Search description...">
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="dataTable"></tbody>
+  </table>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      <small>© 2025 Karli Conradie Physio. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="static/helper.js"></script>
+  <script>
+    // Your data (Python-style list of dicts → JS array of objects)
+    const data = [
+      {"Code": 72117, "Description": "Appointment not kept (schemes will not necessarily grant benefits in respect of this item, it will fall into the By arra"},
+      {"Code": 72302, "Description": "Massage"},
+      {"Code": 72303, "Description": "Myofacial release/soft tissue mobilisation, one or more body parts"},
+      {"Code": 72305, "Description": "Re-education of movement/Exercises (excluding ante- and post-natal exercises)"},
+      {"Code": 72307, "Description": "Pre- and post-operative exercises and/or breathing exercises"},
+      {"Code": 72310, "Description": "Neural tissue mobilisation"},
+      {"Code": 72401, "Description": "Spinal."},
+      {"Code": 72405, "Description": "All other joints."},
+      {"Code": 72407, "Description": "Immobilisation (excluding materials). Rule 008 does not apply."},
+      {"Code": 72501, "Description": "Rehabilitation where the pathology requires the undivided attention of the physiotherapist. Rule 008 does not apply. Dur"},
+      {"Code": 72509, "Description": "Rehabilitation. Each additional full 15 mins. Where the pathology requires the undivided attention of the physiotherapis"},
+      {"Code": 72701, "Description": "Evaluation/counselling at the first visit only (to be fully documented)"},
+      {"Code": 72702, "Description": "Complex evaluation/counselling at the first visit only (to be fully documented)."},
+      {"Code": 72703, "Description": "One complete re-assessment of a patient's condition during the course of treatment. To be used only once per episode of"},
+      {"Code": 72708, "Description": "Interview, guidance or consultation with the patient or his family. To be used only once per episode of care."}
+    ];
+
+    // Render table rows
+    const tableBody = document.getElementById("dataTable");
+    function renderTable(items) {
+      tableBody.innerHTML = "";
+      items.forEach(item => {
+        const row = `<tr>
+            <td>${item.Code}</td>
+            <td>${item.Description}</td>
+          </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+    renderTable(data); // initial render
+
+    // Search filter (on description only)
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+      const filter = this.value.toLowerCase();
+      const filteredData = data.filter(item =>
+        item.Description.toLowerCase().includes(filter)
+      );
+      renderTable(filteredData);
+    });
+  </script>
+</body>
+</html>
